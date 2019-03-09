@@ -1,19 +1,11 @@
 {
   "name": "graphql-phone-type",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Phone Type for Graphql",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
-  "homepage": "https://github.com/enniel/graphql-phone-type",
-  "bugs": {
-    "url": "https://github.com/enniel/graphql-phone-type/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/enniel/graphql-phone-type.git"
-  },
   "scripts": {
     "clean": "rimraf lib dist es coverage",
     "lint": "eslint src demo",
@@ -23,7 +15,7 @@
     "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -i src/index.js -o dist/graphql-phone-type.js",
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -i src/index.js -o dist/graphql-phone-type.min.js",
     "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
-    "prepare": "npm run clean && npm run lint && npm run build",
+    "prepare": "npm run clean && npm run build",
     "demo": "babel-node demo/index.js --plugins=transform-es2015-modules-commonjs"
   },
   "dependencies": {
